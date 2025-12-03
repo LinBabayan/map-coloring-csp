@@ -169,7 +169,7 @@ vector<Coord> generateCoordinates(int width, int height) {
 }
 
 void printAdjacencyList() {
-    cout << "\n===== ADJACENCY LIST =====\n";
+    cout << "\nAdjacency list: \n";
     for (int i = 0; i < N; ++i) {
         cout << "Region " << i << ": ";
         for (int nb : graphAdj[i]) cout << nb << " ";
@@ -178,7 +178,7 @@ void printAdjacencyList() {
 }
 
 void printGraphDiagram() {
-    cout << "\n===== GRAPH DIAGRAM =====\n\n";
+    cout << "\nGraph diagram: \n\n";
 
     const int canvasRows = 20;
     const int canvasCols = 60;
@@ -261,7 +261,7 @@ int main() {
     printGraphDiagram();
 
     // run minimal color search
-    cout << "\n===== SOLVING (trying k = 1..N) =====\n";
+    cout << "\nsolving (trying k = 1..N)\n";
     int foundK = -1;
     for (int k = 1; k <= N; ++k) {
         cout << "Trying k = " << k << " ...\n";
@@ -279,4 +279,3 @@ int main() {
 
     return 0;
 }
-
